@@ -1,0 +1,4 @@
+target/
+output.h5
+pics/
+perf.data*

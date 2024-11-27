@@ -1,0 +1,13 @@
+# FIXME: Necessary to use the local hwloc build provided by the Devana HPC
+#        center. Otherwise we get this sort of linking errors...
+#
+#             rust-lld: error: relocation R_X86_64_32S cannot be used against
+#             symbol 'lzma_alone_decoder_init'; recompile with -fPIC
+#
+#        ...about various symbols that hwloc internally links against.
+#
+#        Building a vendored hwloc also works, but is very costly. So given that
+#        LLD is here for performance, it makes little sense to add a slow
+#        vendored build just to avoid disabling LLD.
+[target.x86_64-unknown-linux-gnu]
+rustflags = ["-Zlinker-features=-lld"]

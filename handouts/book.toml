@@ -1,0 +1,20 @@
+[book]
+authors = ["Hadrien Grasland"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Numerical Computing with Rust on CPU"
+
+[preprocessor.tabs]
+
+[output.html]
+additional-css = ["theme/tabs.css"]
+additional-js = ["theme/tabs.js"]
+edit-url-template = "https://plmlab.math.cnrs.fr/grasland/numerical-rust-cpu/-/edit/main/handouts/{path}"
+git-repository-icon = "fa-gitlab"
+git-repository-url = "https://plmlab.math.cnrs.fr/grasland/numerical-rust-cpu"
+site-url = "/numerical-rust-cpu/"
+smart-punctuation = true
+
+[output.html.fold]
+enable = true

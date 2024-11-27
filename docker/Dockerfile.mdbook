@@ -1,0 +1,7 @@
+ARG BASE_IMAGE=registry.plmlab.math.cnrs.fr/grasland/numerical-rust-cpu/rust_light:latest
+FROM ${BASE_IMAGE}
+SHELL ["/bin/bash", "-c"]
+CMD bash
+
+# Set up mdbook
+RUN cargo binstall -y mdbook mdbook-tabs
